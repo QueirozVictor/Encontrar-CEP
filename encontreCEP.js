@@ -51,3 +51,12 @@ document.getElementById("pesquisar").addEventListener("click", () => {
 
     document.getElementById("mapa").innerHTML = mapaHTML;
 });
+
+const campos = ["cep", "logradouro", "bairro", "cidade", "estado", "numero"]
+    campos.forEach(id => {
+        const elemento = document.getElementById(id);
+        elemento.value = localStorage.getItem(id) || "";
+        elemento.addEventListener("input", () => {
+            localStorage.setItem(id, elemento.value);
+        });
+    });
