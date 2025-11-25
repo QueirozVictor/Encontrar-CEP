@@ -21,6 +21,10 @@ document.getElementById("cep").addEventListener("blur", (evento)=> {
             document.getElementById("estado").value = data.uf;
 
             enderecoBase = `${data.logradouro}, ${data.bairro}, ${data.localidade} - ${data.uf}`;
+
+            document.getElementById("camposExtras").classList.remove("hidden");
+
+
         }else{
             alert("Cep não encontrado!")
         }
@@ -50,6 +54,9 @@ document.getElementById("pesquisar").addEventListener("click", () => {
     `;
 
     document.getElementById("mapa").innerHTML = mapaHTML;
+
+    document.getElementById("camposExtras").scrollIntoView({ behavior: "smooth" });
+
 });
 
 const campos = ["cep", "logradouro", "bairro", "cidade", "estado", "numero"]

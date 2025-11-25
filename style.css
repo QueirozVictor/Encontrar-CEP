@@ -1,48 +1,152 @@
+/* RESET TRADICIONAL */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body{
-    background-color: #B09398;
-}
+/* ======== LAYOUT GERAL ======== */
+body {
+    background-image: url(img/fundo-base.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 
-form{
-    background-color: #5F5449;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    display: grid;
-    width: 450px;
-    height: 450px;
-    margin: auto;
-    margin-top: 50px;
+    display: block;
+    gap: 20px;
     padding: 20px;
-    color: #CEDFD9;
-    border-radius: 8px;
-    box-shadow: 0px 0px 8px #EBFCFB;
-  
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, sans-serif;
 }
 
+/* ======== FORMULÁRIO À ESQUERDA ======== */
+form {
+    background-color: #4f463e75;
+    color: white;
+    border-radius: 8px;
+    margin: auto;
+    padding: 25px;
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    box-shadow: 0px 0px 6px #fb6d00;
+    backdrop-filter: blur(2px);
+}
+
+/* TÍTULO */
 form h1 {
     text-align: center;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 1.8em;
     color: #CEDFD9;
+    text-shadow: 0px 0px 3px #000000ac;
+    margin-bottom: 10px;
 }
 
-form button {
-    background-color: #9B6A6C;
-    box-shadow: 0px 0px 3px rgb(255, 255, 255);
-    margin-top: 10px;
+/* LABEL */
+form label {
+    font-size: 1.2em;
+    margin-top: 5px;
+}
+
+/* INPUT */
+form input {
+    background-color: rgba(255, 255, 255, 0.7);
     border-radius: 5px;
-    color: #CEDFD9;
-    font-size: 1em;
-    font-weight: bold;
-
+    height: 40px;
+    font-size: 1.2em;
+    color: #3f4140;
+    padding: 5px 10px;
+    border: none;
+    width: 100%;
 }
 
-div{
+/* BOTÃO */
+form button {
+    background-color: #00000050;
+    box-shadow: 0px 0px 3px #fb6d00f2;
+    width: 60%;
+    height: 42px;
+    margin: 15px auto 5px auto;
+    border-radius: 5px;
+    color: white;
+    font-size: 1.2em;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+form button:hover {
+    background-color: #fb6d00aa;
+}
+
+/* ======== CAMPOS QUE FICAM ESCONDIDOS ======== */
+.hidden {
+    display: none;
+}
+
+#camposExtras {
+    flex-direction: column;
+    gap: 12px;
+}
+
+#camposExtras:not(.hidden) {
+    display: flex;
+}
+
+
+/* ======== ÁREA DA DIREITA ======== */
+.Direita {
+    width: 100%;
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* TÍTULO DO MAPA */
+.h1 {
+    background: linear-gradient(to right, rgba(143,127,116,0.5), rgba(79,70,62,0.4));
+    color: #CEDFD9;
+    padding: 12px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px #000;
+    font-size: 1.2em;
     margin: auto;
-    margin-top: 10px;
-    width: 650px;
-    height: 650px;
+}
+
+/* MAPA */
+#mapa iframe {
+    width: 100%;
+    height: 350px;
+    border: none;
+    border-radius: 6px;
+    box-shadow: 0px 0px 6px #000000a9;
+}
+
+footer p{
+    margin: auto;
+    margin-top: 20px;
+}
+
+/* ======== RESPONSIVIDADE ======== */
+@media (max-width: 900px) {
+    body {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    form, .Direita {
+        width: 100%;
+    }
+
+    form button {
+        width: 80%;
+    }
+}
+
+.base{
+    display: flex;
+    margin: auto;
 }

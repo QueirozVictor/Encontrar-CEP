@@ -3,36 +3,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CEP</title>
+    <title>Pesquisa de Endereço</title>
+
     <link rel="stylesheet" href="style.css">
     <script src="encontreCEP.js" defer></script>
 </head>
+
 <body>
+
+    <!-- ======== FORMULÁRIO À ESQUERDA ======== -->
     <form>
-         <h1>Pesquisa de  Endereço</h1>
 
-         <label for="cep">CEP</label>
-            <input type="number" id="cep" name="cep" required>
+        <h1>Pesquisa de Endereço</h1>
 
-          <label for="logradouro">Logradouro</label>
-            <input type="text" id="logradouro" name="logradouro" required>
+        <!-- PRIMEIROS CAMPOS (visíveis sempre) -->
+        <label for="cep">CEP</label>
+        <input type="number" id="cep" name="cep" required>
 
-          <label for="bairro">Bairro</label>
-            <input type="text" id="bairro" name="bairro" required>
+        <label for="numero">Número da Residência</label>
+        <input type="text" id="numero" name="numero" required>
 
-         <label for="cidade">Cidade</label>
-            <input type="text" id="cidade" name="cidade" required>
+        <button type="button" id="pesquisar">Buscar</button>
 
-         <label for="estado">Estado</label>
-            <input type="text" id="estado" name="estado" required>
+        <!-- CAMPOS QUE APARECEM DEPOIS -->
+        <div id="camposExtras" class="hidden">
 
-         <label for="numero">Numero</label>
-            <input type="text" id="numero" name="numero" required>
+            <label for="logradouro">Logradouro</label>
+            <input type="text" id="logradouro" name="logradouro">
 
-         <button type="button" id="pesquisar">Pesquisar</button>
+            <label for="bairro">Bairro</label>
+            <input type="text" id="bairro" name="bairro">
+
+            <label for="cidade">Cidade</label>
+            <input type="text" id="cidade" name="cidade">
+
+            <label for="estado">Estado</label>
+            <input type="text" id="estado" name="estado">
+
+        </div>
 
     </form>
 
-    <div id="mapa"></div>
+
+    <!-- ======== ÁREA DO MAPA À DIREITA ======== -->
+    <div class="Direita">
+
+        <div class="h1">
+            <h1>Confira no Mapa:</h1>
+        </div>
+
+        <div id="mapa"></div>
+
+    </div>
+
+    <footer class="base">
+        <p><a href="https://www.instagram.com/victor_.queiroz/" target="_blank"><img src="img/inta50.png" alt=""></a></p>
+    </footer>
 </body>
 </html>
